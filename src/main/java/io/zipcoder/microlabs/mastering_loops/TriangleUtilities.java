@@ -3,18 +3,28 @@ package io.zipcoder.microlabs.mastering_loops;
 public class TriangleUtilities {
 
     public static String getTriangle(int numberOfRows) {
-        return null;
+        StringBuilder sb = new StringBuilder();
+        int numStar = 1;
+        while(numStar < numberOfRows){
+            String thisRow = getRow(numStar);
+            sb.append(thisRow).append("\n");
+            numStar++;
+        }
+        return sb.toString();
     }
 
     public static String getRow(int numberOfStars) {
-        return null;
+        StringBuilder stars = new StringBuilder();
+        stars.append("*".repeat(Math.max(0, numberOfStars)));
+        return stars.toString();
+        //do this method first
     }
 
     public static String getSmallTriangle() {
-        return null;
+        return getTriangle(5);
     }
 
     public static String getLargeTriangle() {
-        return null;
+        return getTriangle(10);
     }
 }
