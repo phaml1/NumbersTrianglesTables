@@ -14,10 +14,10 @@ public class TableUtilities {
     public static String getMultiplicationTable(int tableSize) {
         StringBuilder table = new StringBuilder();
         for (int i = 1; i < tableSize + 1; i++){
-            for (int j = 1; j < tableSize + 1; j++){
-                table.append(i*j);
-            }
             table.append("\n");
+            for (int j = 1; j < tableSize + 1; j++){
+                table.append(i*j).append(" |");
+            }
         }
         return table.toString();
     }
